@@ -2,15 +2,42 @@
 <html>
   <head>
     <title>Monportfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
+    <div class="navbar-dark navbar-expand-sm navbar-light navbar-text bg-black">
+      <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <%= link_to "Accueil", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Mes compétences","#" , class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Mes projets", project_path, class: "nav-link" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <%= yield %>
+    <div class="footer">
+      <div class="footer-links">
+        Contactez-moi sur:
+        <a href="https://github.com/yodesch" target="blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/yoann-deschaux-099756232/" target="blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:yoanndeschaux@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">
+        <i class="fa-regular fa-copyright"></i></i> Yoann DESCHAUX. All rights reserved
+      </div>
+    </div>
   </body>
 </html>
